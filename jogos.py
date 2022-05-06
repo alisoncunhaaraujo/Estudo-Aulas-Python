@@ -17,3 +17,5 @@ elif(jogo == 2):
     print("Jogando adivinhação")
     adivinhacao.jogar()
             
+if(__name__ == "__main__"):
+    jogar()
