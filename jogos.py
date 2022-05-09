@@ -7,15 +7,15 @@ print("*******Escolha o seu jogo!*******")
 print("*********************************")
 
 
-print ("(1) Forca      (2)Adivinhação")
-jogo = int(input("Qual jogo você quer jogar?"))
+print ("(1) Forca      (2)AdivinhaÃ§Ã£o")
+jogo = int(input("Qual jogo voce quer jogar?"))
 
 if(jogo == 1):
     print("Jogando forca")
     forca.jogar()
 elif(jogo == 2):
-    print("Jogando adivinhação")
+    print("Jogando adivinhaÃ§Ã£o")
     adivinhacao.jogar()
             
 if(__name__ == "__main__"):
-    jogar()
+     forca.jogar()

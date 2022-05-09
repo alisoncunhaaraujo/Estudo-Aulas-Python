@@ -1,8 +1,9 @@
-print("********************************")
-print("Bem vindo ao jogo de adivinhação")
-print("********************************")
+from ast import If
 
 
+print ("********************************")
+print ("Bem vindo ao jogo de adivinhação")
+print ("********************************")
 
 numero_secreto = 42
 
@@ -12,16 +13,12 @@ print ("Voce digitou" , chute_str)
 
 chute = int(chute_str)
 
-acertou = chute == numero_secreto
-maior   = chute >  numero_secreto
-menor   = chute <  numero_secreto
-
-if (acertou):
+if (numero_secreto == chute):
     print("Voce acertou")
 else: 
-    if  (maior):
+    if(chute > numero_secreto):
         print("Voce errou, seu chute foi maior que o numero secreto")
-    elif(menor):
+    elif(chute < numero_secreto):
         print("Voce acertou, seu chute foi menor que o numero secreto")
 
 
