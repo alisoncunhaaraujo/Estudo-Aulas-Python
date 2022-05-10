@@ -4,7 +4,7 @@ import random
 def jogar():
 
     print("********************************")
-    print("Bem vindo ao jogo de adivinhação")
+    print("Bem vindo ao jogo de adivinhaca")
     print("********************************")
 
 

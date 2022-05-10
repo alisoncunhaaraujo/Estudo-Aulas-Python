@@ -11,13 +11,18 @@ def jogar():
 
     while(not enforcou and not acertou):
         
-        chute = input ("Digite uma letra")
+        chute = input ("Qual letra ")
 
+        index = 0
         for letra in palavra_secreta:
              if(chute == letra):
-                print(letra)
+                 print("Encontrei a letra{} na posicao {}".format(letra, index))
+             index = index +1
         
-        print("jogando")
+             print("jogando")
+
+    print("Fim do jogo")
+ 
  
     if(__name__ == "__main__"):
-         jogar()
+        jogar()
