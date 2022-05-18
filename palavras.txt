@@ -1,1 +1,4 @@
-banana\nmelancia\nmorango\nmaca\n
+banana
+melancia
+nmorango
+maca

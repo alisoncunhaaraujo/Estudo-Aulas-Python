@@ -1,10 +1,24 @@
 # -*- coding: cp1252 -*-
+import random
+
 def jogar():
     print("********************************")
     print("***Bem vindo ao jogo de Forca***")
     print("********************************")
     
-    palavra_secreta = "maça".upper()
+
+    arquivo = open("palavras.txt", "r")
+    palavras = []
+    
+    for linha in arquivo:
+        linha = linha.strip()
+        palavras.append(linha)
+
+    arquivo.close
+
+    numero = random.randrange(0,len(palavras))
+    palavra_secreta = palavras[numero].upper()
+    
     letras_acertadas = ["_" for letra in palavra_secreta]
 
     
@@ -22,7 +36,7 @@ def jogar():
         if(chute in palavra_secreta):
           index = 0
           for letra in palavra_secreta:
-             if(chute.upper() == letra.upper()):
+             if(chute == letra):
                    letras_acertadas[index] = letra
              index += 1
         else:
@@ -34,12 +48,12 @@ def jogar():
     
 
         if(acertou):
-           print("Voce ganhou")
+           print("Voce acertou")
         else:
-          print("Voce perdeu")
+          print("Voce errou")
         
-        
-        print("Fim do jogo")
+        if(enforcou == True):
+            print("Fim do jogo")
  
  
 if(__name__ == "__main__"):
