@@ -87,5 +87,10 @@ def imprime_mensagem_perdedor():
 
 
 
+
+
+
+
+
 if(__name__ == "__main__"):
         jogar()
