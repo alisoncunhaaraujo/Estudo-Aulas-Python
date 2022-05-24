@@ -21,19 +21,21 @@ def jogar():
         chute = pede_chute()
        
         if(chute in palavra_secreta):
-          marca_chute_correto(chute, letras_acertadas, palavra_secreta)
+             marca_chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
              erros += 1
+             desenha_forca(erros)
              
         enforcou = erros == 6
         acertou = "_" not in letras_acertadas
+        
         print(letras_acertadas)
     
 
-        if(acertou):
-           imprime_mensagem_vencedor()
-        else:
-          imprime_mensagem_perdedor()
+    if(acertou):
+             imprime_mensagem_vencedor()
+    else:
+             imprime_mensagem_perdedor(palavra_secreta)
        
 
 
@@ -64,35 +66,39 @@ def carregamento_palavra_secreta():
 
 
 def pede_chute():
-    chute = input ("Qual letra? ")
+    chute = input ("Qual letra?")
     chute = chute.strip().upper()
     return chute
 
 
 def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
     index = 0
-          for letra in palavra_secreta:
-             if(chute == letra):
-                   letras_acertadas[index] = letra
-             index += 1
+    for letra in palavra_secreta:
+        if(chute == letra):
+           letras_acertadas[index] = letra
+        index += 1
 
 
 def imprime_mensagem_vencedor():
-    print("________/|/|/|\|\")
-    print("________(^O.O^)")
-    print("________(.(_).)")
-    print("________\..--../")
-    print("_______/¯¯Y¯¯\.\")
-    print("_______|..|.......\.\")
-    print("_______|. \_......|\.\")
-    print("________\__\.......|..\")
-    print("_____(¯¯¯\..\_|/¯¯\_\_______oooooo__")
-    print("______)===ººº=====0000=========);;;]")
-    print("_____(____/¯¯¯\__/")
-    print("_______/../__________\...\")
-    print("__.__./._/____________\._.\__")
-    print("_(______/____________(_____)")
-
+                print("___________________Voce ganhou!________________")
+                print("________´$$$$`_____________________________,,,_")
+                print("_______´$$$$$$$`_________________________´$$$`")
+                print("________`$$$$$$$`______,,________,,_______´$$$$´")
+                print("_________`$$$$$$$`____´$$`_____´$$`____´$$$$$´")
+                print("__________`$$$$$$$`_´$$$$$`_´$$$$$`__´$$$$$$$´")
+                print("___________`$$$$$$$_$$$$$$$_$$$$$$$_´$$$$$$$´_")
+                print("____________`$$$$$$_$$$$$$$_$$$$$$$`´$$$$$$´_")
+                print("___,,,,,,______`$$$$$$_$$$$$$$_$$$$$$$_$$$$$$´_")
+                print("_´$$$$$`____`$$$$$$_$$$$$$$_$$$$$$$_$$$$$$´_")
+                print("´$$$$$$$$$`´$$$$$$$_$$$$$$$_$$$$$$$_$$$$$´_")
+                print("´$$$$$$$$$$$$$$$$$$_$$$$$$$_$$$$$$$_$$$$$´_")
+                print("___`$$$$$$$$$$$$$$$_$$$$$$$_$$$$$$_$$$$$$´_")
+                print("______`$$$$$$$$$$$$$_$$$$$__$$_$$$$$$_$$´_")
+                print(" _______`$$$$$$$$$$$$,___,$$$$,_____,$$$$$´_")
+                print("_________`$$$$$$$$$$$$$$$$$$$$$$$$$$$$$´_")
+                print("__________`$$$$$$$$$$$$$$$$$$$$$$$$$$$´_")
+                print("____________`$$$$$$$$$$$$$$$$$$$$$$$$´_")
+                print("_______________`$$$$$$$$$$$$$$$$$$$$´_")
 
 
 def imprime_mensagem_perdedor(palavra_secreta):
@@ -165,7 +171,7 @@ def desenha_forca(erros):
         print("|     (_)    ")
         print("|    \ |     ")
         print("|            ")
-        print("|            
+        print("|            ")
 
     if(erros == 4):
         print("|     (_)    ")
